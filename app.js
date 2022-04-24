@@ -13,11 +13,19 @@ app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
 
+// Respondiendo texto
 app.get('/launchx', (req, res) => {
     res.send('Bienvenidos a Launch X');
 })
 
+// Regresando un objeto
 app.get('/explorersInNode', (req, res) => {
     const explorer = {name: "Explorer", msg: "Hello"};
     res.send(explorer);
+})
+
+// Query Params: Recibir parametros por la url
+// req.params = {"explorerName":"carlo"}
+app.get('/explorers/:explorerName', (req, res) => {
+    res.send(req.params);
 })
