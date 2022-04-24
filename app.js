@@ -6,9 +6,13 @@ const app = express()
 const port = 3000
  // path inicial, responderá a la url localhost:3000
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('H')
 })
  // Con esto inicializamos esta app
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
+})
+
+app.get('/launchx', (req, res) => {
+    res.send('Bienvenidos a Launch X')
 })
